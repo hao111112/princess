@@ -11,7 +11,7 @@ app.use(express.json());
 
 // 创建数据库连接
 const connection = mysql.createConnection({
-    host: 'localhost',
+    host: '18.142.183.247',
     user: 'root',
     password: 'root',
     database: 'princess'
