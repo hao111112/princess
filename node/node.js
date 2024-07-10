@@ -16,10 +16,13 @@ const connection = mysql.createConnection({
     password: 'root',
     database: 'princess'
   });
-
+  app.use(express.static(path.join(__dirname, './frontend/finalPrincess')));
 // 处理 POST 请求,接收手机号和地区信息
 app.post('/api/commitPhone', (req, res) => {
     const { region, phone } = req.body;
+    if (!region || !phone) {
+      return res.status(400).json({ error: '参数不完整' });
+    }
     // 查询数据库是否已经存在相同的 region 和 phone 值
     connection.query(
       'SELECT * FROM user WHERE region = ? AND phone = ?',
@@ -40,7 +43,6 @@ app.post('/api/commitPhone', (req, res) => {
                 console.error(error);
                 return res.status(500).json({ error: '提交失败,数据库插入出错' });
               }
-  
               console.log(`收到手机号: ${phone}, 地区: ${region}`);
               res.json({ message: '提交成功' });
             }
