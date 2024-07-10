@@ -243,17 +243,31 @@ const translations = {
        const service= document.querySelector('.lang-service');
        service.textContent = translations[lang]['lang-service'];
        const logo = document.querySelector('.logo');
-       console.log(logo)
+       const gameImg1=document.querySelector('.gameImg1');
+       const gameImg2=document.querySelector('.gameImg2');
+       const gameImg3=document.querySelector('.gameImg3');
+       const gameImg4=document.querySelector('.gameImg4');
+       const gameImg5=document.querySelector('.gameImg5');
        if(lang==='zh-TW'){
         lang_agree.href="Tnc.html"
         privacy.href="Privacy.html"
         service.href="Tnc.html"
-     logo.style.backgroundImage = `url(../finalPrincess/images/header/buttton/Logo.svg)`;
+     logo.style.backgroundImage = `url(/finalPrincess/images/header/buttton/Logo.svg)`;
+     gameImg1.src='/finalPrincess/images/main/box4/intro1.png';
+     gameImg2.src='/finalPrincess/images/main/box4/intro2.png';
+     gameImg3.src='/finalPrincess/images/main/box4/intro3.png';
+     gameImg4.src='/finalPrincess/images/main/box4/intro4.png';
+     gameImg5.src='/finalPrincess/images/main/box4/intro5.png';
       }else{
         lang_agree.href="TncEN.html"
         privacy.href="PrivacyEN.html"
         service.href="TncEN.html"
-        logo.style.backgroundImage = `url(../finalPrincess/images/header/buttton/LogoEN.png)`;
+        logo.style.backgroundImage = `url(/finalPrincess/images/header/buttton/LogoEN.png)`;
+        gameImg1.src='/finalPrincess/images/main/box4/intro1EN.png';
+        gameImg2.src='/finalPrincess/images/main/box4/intro2EN.png';
+        gameImg3.src='/finalPrincess/images/main/box4/intro3EN.png';
+        gameImg4.src='/finalPrincess/images/main/box4/intro4EN.png';
+        gameImg5.src='/finalPrincess/images/main/box4/intro5EN.png';
       }
       }
   

@@ -263,16 +263,31 @@ let lang='zh-TW';
      document.querySelector('.warrior').textContent = translations[lang]['warrior'];
      document.querySelector('.lang-success').innerHTML = translations[lang]['lang-success'];
      const logo = document.querySelector('.logo');
+     const gameImg1=document.querySelector('.gameImg1');
+     const gameImg2=document.querySelector('.gameImg2');
+     const gameImg3=document.querySelector('.gameImg3');
+     const gameImg4=document.querySelector('.gameImg4');
+     const gameImg5=document.querySelector('.gameImg5');
      if(lang==='zh-TW'){
       lang_agree.href="Tnc.html"
       privacy.href="Privacy.html"
       service.href="Tnc.html"
-   logo.style.backgroundImage = 'url(../finalPrincessPhone/images/header/background/Logo.png)';
+   logo.style.backgroundImage = 'url(/finalPrincessPhone/images/header/background/Logo.png)';
+   gameImg1.src='/finalPrincessPhone/images/main/box4/intro1.png';
+   gameImg2.src='/finalPrincessPhone/images/main/box4/intro2.png';
+   gameImg3.src='/finalPrincessPhone/images/main/box4/intro3.png';
+   gameImg4.src='/finalPrincessPhone/images/main/box4/intro4.png';
+   gameImg5.src='/finalPrincessPhone/images/main/box4/intro5.png';
     }else{
       lang_agree.href="TncEN.html"
       privacy.href="PrivacyEN.html"
       service.href="TncEN.html"
-      logo.style.backgroundImage = 'url(../finalPrincessPhone/images/header/background/LogoEN.png)';
+      logo.style.backgroundImage = 'url(/finalPrincessPhone/images/header/background/LogoEN.png)';
+      gameImg1.src='/finalPrincessPhone/images/main/box4/intro1EN.png';
+      gameImg2.src='/finalPrincessPhone/images/main/box4/intro2EN.png';
+      gameImg3.src='/finalPrincessPhone/images/main/box4/intro3EN.png';
+      gameImg4.src='/finalPrincessPhone/images/main/box4/intro4EN.png';
+      gameImg5.src='/finalPrincessPhone/images/main/box4/intro5EN.png';
     }
     }
 

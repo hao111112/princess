@@ -16,7 +16,7 @@ const connection = mysql.createConnection({
     password: 'root',
     database: 'princess'
   });
-  app.use(express.static(path.join(__dirname, './frontend/finalPrincessPhone')));
+  app.use(express.static(path.join(__dirname, './frontend')));
 // 处理 POST 请求,接收手机号和地区信息
 app.post('/api/commitPhone', (req, res) => {
     const { region, phone } = req.body;

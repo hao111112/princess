@@ -1,11 +1,10 @@
-var screenWidth = window.innerWidth;
+let screenWidth = window.innerWidth;
 
 // 根据屏幕宽度判断跳转页面
 if (screenWidth < 768) {
-  // 屏幕宽度小于 768px，跳转至移动端页面
-  window.location.href = "../finalPrincessPhone/index.html";
-} 
-
+// 屏幕宽度小于 768px，跳转至移动端页面
+window.location.href = "/finalPrincessPhone/index.html";
+}
 let phoneInput = document.getElementById('phoneText');
 let AgreeCheck = document.getElementById('agreeCheck');
 const selectRegions = document.querySelectorAll('.selectRegion');
