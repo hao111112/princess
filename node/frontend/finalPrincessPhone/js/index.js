@@ -22,7 +22,31 @@ phoneInput.addEventListener('input', (event) => {
 
 
 //
+selectRegions.forEach((region, index) => {
+  region.addEventListener('click', () => {
+    const selectedValue = region.getAttribute('value');
+    const selectedText = region.textContent.trim();
+    selectRegions[0].setAttribute('value', selectedValue);
+    selectRegions[0].textContent = selectedText;
+    
+  });
+});
+//
+document.addEventListener('DOMContentLoaded', () => {
+  const languages = document.querySelectorAll('.language');
+  const firstLanguage = languages[0];
 
+  languages.forEach((language) => {
+    language.addEventListener('click', () => {
+      // 获取被点击元素的语言代码
+      const clickedLang = language.dataset.lang;
+
+      // 将第一个元素的语言代码更新为被点击元素的语言代码
+      firstLanguage.dataset.lang = clickedLang;
+      firstLanguage.textContent = language.textContent;
+    });
+  });
+});
 function alertError(category,lang){
   if(category===0){
     if(lang==='zh-TW'){
@@ -275,6 +299,9 @@ function scrollToSection(sectionId) {
     case 'menuattention':
       targetElement = document.querySelector('#attention');
       break;
+    case 'menuPrize':
+        targetElement = document.querySelector('#menuPrize');
+        break;  
   }
   if (targetElement) {
     targetElement.scrollIntoView({ behavior: 'smooth' }); // 平滑滚动到目标位置

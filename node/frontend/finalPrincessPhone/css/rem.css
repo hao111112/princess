@@ -289,9 +289,9 @@ html{
   font-weight: 500;
 
 }
-.box1 .content2 .attend{
+ .attend{
   position: absolute;
-  bottom: 0.2rem;
+  top: 0.1rem;
   left: 50%;
   transform: translateX(-50%);
     width: 2rem;
