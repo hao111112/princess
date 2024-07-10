@@ -201,7 +201,7 @@ const translations = {
 },
 };
 
-
+let lang='zh-TW';
   function switchLanguage(lang) {
       // 更新页面内容
       document.querySelector('.lang-prize').textContent = translations[lang]['lang-prize'];
@@ -215,8 +215,6 @@ const translations = {
       document.querySelector('.lang-box1t1').textContent = translations[lang]['lang-box1t1'];
       document.querySelector('.lang-box1text2').innerHTML = translations[lang]['lang-box1text2'];
       document.querySelector('.lang-pleasePhone').textContent = translations[lang]['lang-pleasePhone'];
-    
-
       document.querySelector('.lang-HK-phone:nth-child(1)').textContent = translations[lang]['lang-HK-phone'];
       document.querySelector('.lang-HK-phone:nth-child(2)').textContent = translations[lang]['lang-HK-phone'];
       document.querySelector('.lang-TW-phone').textContent = translations[lang]['lang-TW-phone'];
@@ -269,12 +267,12 @@ const translations = {
       lang_agree.href="Tnc.html"
       privacy.href="Privacy.html"
       service.href="Tnc.html"
-   logo.style.backgroundImage = 'url(../images/header/buttton/Logo.svg)';
+   logo.style.backgroundImage = 'url(../finalPrincessPhone/images/header/background/Logo.png)';
     }else{
       lang_agree.href="TncEN.html"
       privacy.href="PrivacyEN.html"
       service.href="TncEN.html"
-      logo.style.backgroundImage = '../images/header/buttton/LogoEN.png';
+      logo.style.backgroundImage = 'url(../finalPrincessPhone/images/header/background/LogoEN.png)';
     }
     }
 
@@ -282,8 +280,9 @@ const langSwitcher = document.querySelectorAll('.language');
 
 langSwitcher.forEach(btn => {
 btn.addEventListener('click', () => {
-  const lang = btn.dataset.lang;
+  lang = btn.dataset.lang;
   switchLanguage(lang);
+  console.log(btn.dataset.lang);
 });
 });
 // 默认设置为繁体中文

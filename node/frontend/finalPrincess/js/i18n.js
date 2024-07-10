@@ -258,10 +258,10 @@ const translations = {
       }
   
   const langSwitcher = document.querySelectorAll('.language');
-  
+
 langSwitcher.forEach(btn => {
   btn.addEventListener('click', () => {
-    const lang = btn.dataset.lang;
+      lang = btn.dataset.lang;
     switchLanguage(lang);
   });
 });

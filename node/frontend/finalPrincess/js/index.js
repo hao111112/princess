@@ -1,3 +1,11 @@
+var screenWidth = window.innerWidth;
+
+// 根据屏幕宽度判断跳转页面
+if (screenWidth < 768) {
+  // 屏幕宽度小于 768px，跳转至移动端页面
+  window.location.href = "../finalPrincessPhone/index.html";
+} 
+
 let phoneInput = document.getElementById('phoneText');
 let AgreeCheck = document.getElementById('agreeCheck');
 const selectRegions = document.querySelectorAll('.selectRegion');
@@ -53,7 +61,7 @@ function alertError(category,lang){
       }else if(lang==='ko'){
         alert('휴대폰 번호는 비워 둘 수 없습니다！');
       }else if(lang==='ja'){
-        alert('手機號爲空!');
+        alert('手机番号が空です');
       }
     }else if(category===1){
       if(lang==='zh-TW'){
@@ -90,13 +98,13 @@ function alertError(category,lang){
     }
     else if(category===4){
       if(lang==='zh-TW'){
-        alert('請勿重複預約!');
+        alert('本手機號碼已完成預約!');
       }else if(lang==='en'){
-        alert('Please do not repeat the reservation！');
+        alert('This mobile phone number has completed the reservation！');
       }else if(lang==='ko'){
-        alert('예약을 반복하지 마세요！');
+        alert('이 휴대폰 번호로 예약이 완료되었습니다！');
       }else if(lang==='ja'){
-        alert('予約を繰り返さないでください！');
+        alert('この携帯電話番号は予約を完了しました!');
       }
     }
 }
@@ -142,7 +150,7 @@ commitPhoneElement.addEventListener('click', () => {
     }
   }
   if(selectedRegion==="81"){
-    if(!phoneRegex.jp.test(phoneValue)){
+    if(!phoneRegex.JP.test(phoneValue)){
       alertError(1,lang)
       return
     }
@@ -163,7 +171,7 @@ commitPhoneElement.addEventListener('click', () => {
   // 所有检查通过后,执行提交操作
 
   // 在这里添加您的提交逻辑
-  fetch('http://18.142.183.247:8084/api/commitPhone', {
+  fetch('http://127.0.0.1:8084/api/commitPhone', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
