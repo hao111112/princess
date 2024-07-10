@@ -171,7 +171,7 @@ commitPhoneElement.addEventListener('click', () => {
   // 所有检查通过后,执行提交操作
 
   // 在这里添加您的提交逻辑
-  fetch('http://127.0.0.1:8084/api/commitPhone', {
+  fetch('http://18.142.183.247:8084/api/commitPhone', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
