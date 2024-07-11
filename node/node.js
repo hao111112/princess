@@ -5,7 +5,6 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 const https = require('https');
-const port = 443;
 app.use(cors());
 // 使用 express.json() 中间件解析 JSON 请求体
 app.use(express.json());
@@ -17,21 +16,9 @@ const connection = mysql.createConnection({
     password: 'root',
     database: 'princess'
   });
-  const options = {
-    key: fs.readFileSync('./ssl/register.key'),
-    cert: fs.readFileSync('./ssl/register_princesscantdefend_com.crt')
-  };
-  https.createServer(options, (req, res) => {
-    // 您的应用程序逻辑
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-  }).listen(443);
-  app.use((req, res, next) => {
-    if (!req.secure) {
-      return res.redirect(`https://${req.get('host')}${req.url}`);
-    }
-    next();
-  });
+  
+
+
   app.use(express.static(path.join(__dirname, './frontend')));
 // 处理 POST 请求,接收手机号和地区信息
 app.post('/api/commitPhone', (req, res) => {
@@ -99,7 +86,14 @@ app.post('/api/commitPhone', (req, res) => {
   app.get('/', (req, res) => {
     res.redirect('/finalPrincess/index.html');
   });
-  
-  app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-  });
+  // 创建 HTTP 服务器,并将请求重定向到 HTTPS
+
+
+const options = {
+  key: fs.readFileSync('./ssl/register.key'),
+  cert: fs.readFileSync('./ssl/register_princesscantdefend_com.crt'),
+  ca: fs.readFileSync('./ssl/register_princesscantdefend_com.ca-bundle')
+};
+
+https.createServer(options, app).listen(443,()=>{console.log('Server is running on https://localhost:443');})
+ 
