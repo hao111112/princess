@@ -291,7 +291,7 @@ let lang='zh-TW';
     }
     }
 
-const langSwitcher = document.querySelectorAll('.language');
+const langSwitcher = document.querySelectorAll('.language1');
 
 langSwitcher.forEach(btn => {
 btn.addEventListener('click', () => {
