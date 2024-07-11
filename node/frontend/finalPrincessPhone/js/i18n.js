@@ -279,9 +279,9 @@ let lang='zh-TW';
    gameImg4.src='/finalPrincessPhone/images/main/box4/intro4.png';
    gameImg5.src='/finalPrincessPhone/images/main/box4/intro5.png';
     }else{
-      lang_agree.href="TncEN.html"
-      privacy.href="PrivacyEN.html"
-      service.href="TncEN.html"
+      lang_agree.href="../finalPrincess/TncEN.html"
+      privacy.href="../finalPrincess/PrivacyEN.html"
+      service.href="../finalPrincess/TncEN.html"
       logo.style.backgroundImage = 'url(/finalPrincessPhone/images/header/background/LogoEN.png)';
       gameImg1.src='/finalPrincessPhone/images/main/box4/intro1EN.png';
       gameImg2.src='/finalPrincessPhone/images/main/box4/intro2EN.png';

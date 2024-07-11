@@ -10,6 +10,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
     <link rel="icon" href="../finalPrincess/favicon.png" type="image/x-icon">
+    <meta property="og:title" content="像素風塔防手機遊戲《公主守不了》事前預約火熱進行中">
+    <meta property="og:description" content="立即預約領好禮，解鎖終極大獎金卡公主！">
+    <meta property="og:url" content="https://register.princesscantdefend.com/finalPrincessPhone/index.html">
+    <meta property="og:image" content="./images/op.png">
+    <meta property="og:type" content="website">
+    <script src="//jscdn.appier.net/aa.js?id=princesscantdefend.com" async></script>
 </head>
 <body>
   
@@ -179,8 +185,8 @@
     </div>
    
     <div class="link">
-         <a href="Privacy.html"target="_blank" class="lang-privacy">隱私條款</a>
-         <a href="Tnc.html" target="_blank"class="lang-service">服務條款</a>
+         <a href="../finalPrincess/Privacy.html"target="_blank" class="lang-privacy">隱私條款</a>
+         <a href="../finalPrincess/Tnc.html" target="_blank"class="lang-service">服務條款</a>
     </div>
     <div class="copyright">
       Copyright (C) Celestial Studio Limited.
@@ -189,13 +195,76 @@
   <script src="./js/i18n.js"></script>
   <script src="./js/index.js"></script>
 
-<script>
+  <script>
+    
+    window.addEventListener('load', function() {
+       //进入网页后触发
+   window.appier_q = window.appier_q || [];
+   window.appier_q.push( {"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},
+    {"t":"pv_track","action_id": "PageView_ce76","track_id":"341bceabc059320","isCountReload": true,"counter": 0},
+    {"t":"pv_track","action_id": "ViewTwoPages_c59b","track_id":"341bceabc059320","isCountReload": false,"counter": 1})
+   // 获取需要跟踪的元素
+   var beforeAppointElement = document.querySelector('.appoint');
+   var appointElement = document.querySelector('.button');
+   var commitElement = document.querySelector('.commit');
 
+   // 标志,记录是否已经触发过跟踪事件
+   var hasTriggeredBeforeAppointEvent = false;
+   var hasTriggeredAppointEvent = false;
+   var hasTriggeredCommitEvent = false;
 
-// 定义国际化资源对象
+   // 设置 IntersectionObserver 观察元素
+   var observer = new IntersectionObserver(function(entries) {
+     entries.forEach(function(entry) {
+       // 如果 beforeappoint 元素进入视窗区域,且还没有触发过跟踪事件
+       if (entry.target === beforeAppointElement && entry.isIntersecting && !hasTriggeredBeforeAppointEvent) {
+         triggerBeforeAppointTrackingEvent();
+         hasTriggeredBeforeAppointEvent = true;
+       }
+       // 如果 appoint 元素进入视窗区域,且还没有触发过跟踪事件
+       else if (entry.target === appointElement && entry.isIntersecting && !hasTriggeredAppointEvent) {
+         triggerAppointTrackingEvent();
+         hasTriggeredAppointEvent = true;
+       }
+       // 如果 commit 元素进入视窗区域,且还没有触发过跟踪事件
+       else if (entry.target === commitElement && entry.isIntersecting && !hasTriggeredCommitEvent) {
+         triggerCommitTrackingEvent();
+         hasTriggeredCommitEvent = true;
+       }
+     });
+   });
 
+   // 开始观察各个元素
+   observer.observe(beforeAppointElement);
+   observer.observe(appointElement);
+   observer.observe(commitElement);
+ });
+ function triggerBeforeAppointTrackingEvent() {
+   window.appier_q = window.appier_q || [];
+window.appier_q.push(
+{"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},
+{"t": "type_process", "content": "submit", "action_id": "Process_126a", "track_id": "341bceabc059320", "opts": {"unique_key": "true"}})
+   console.log('Before Appoint Tracking event triggered!');
+   // 您可以在这里添加发送跟踪数据的代码
+ }
 
- 
-</script>
+ function triggerAppointTrackingEvent() {
+   console.log('Appoint Tracking event triggered!');
+   window.appier_q = window.appier_q || [];
+window.appier_q.push(
+{"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},
+{"t": "type_conversion", "content": "submit", "action_id": "Conversion_09b0", "track_id": "341bceabc059320", "opts": {"unique_key": "true"}})
+   // 您可以在这里添加发送跟踪数据的代码
+ }
+
+ function triggerCommitTrackingEvent() {
+   window.appier_q = window.appier_q || [];
+window.appier_q.push(
+{"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},
+{"t": "type_conversion", "content": "submit", "action_id": "Conversion_1c13", "track_id": "341bceabc059320", "opts": {"unique_key": "true"}})
+   console.log('Commit Tracking event triggered!');
+   // 您可以在这里添加发送跟踪数据的代码
+ }
+   </script>
 </body>
 </html>

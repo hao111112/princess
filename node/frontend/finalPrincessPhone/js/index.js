@@ -166,7 +166,7 @@ console.log(lang)
   // 所有检查通过后,执行提交操作
 
   // 在这里添加您的提交逻辑
-  fetch('http://18.142.183.247:8084/api/commitPhone', {
+  fetch('https://register.princesscantdefend.com/api/commitPhone', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -176,19 +176,25 @@ console.log(lang)
   })
   .then(response => response.json())
   .then(data => {
-    if(data.error==="手机号和地区已存在"){
+    console.log(data)
+    if(data.code!==200){
       alertError(4,lang);
       return;
-    }
-    // 在这里添加其他成功后的逻辑
+    }else{
+ // 在这里添加其他成功后的逻辑
     // 获取弹窗元素
     let modal = document.querySelector('.modal-container');
      modal.style.display="block"
+     window.appier_q = window.appier_q || [];
+window.appier_q.push(
+  {"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},
+  {"t": "type_landing", "action_id": "ViewLanding_e6b7", "track_id": "341bceabc059320", "opts": {"unique_key": "true"}})
     // 获取关闭按钮元素
     let closeButton = document.querySelector('.close-button');
     // 显示弹窗
-    //let menuCloseButton = document.querySelector('.close-button');
 
+    
+    // 点击关闭按钮隐藏弹窗
     closeButton.addEventListener('click', function() {
       modal.style.display = 'none';
     });
@@ -199,8 +205,7 @@ console.log(lang)
         modal.style.display = 'none';
       }
     });
-
-
+    }
 
   })
   .catch(error => {
