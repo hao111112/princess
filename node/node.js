@@ -11,7 +11,7 @@ app.use(express.json());
 
 // 创建数据库连接
 const connection = mysql.createConnection({
-    host: '35.73.140.203',
+    host: 'localhost',
     user: 'root',
     password: 'root',
     database: 'princess'
@@ -45,7 +45,7 @@ app.post('/api/commitPhone', (req, res) => {
           (error, results, fields) => {
             if (error) {
               console.error(error);
-              return res.status(500).json({ error: '提交失败,数据库插入出错', code: 400 });
+              return res.status(500).json({ error: error, code: 400 });
             }
             console.log(`收到手机号: ${phone}, 地区: ${region}`);
             res.json({ message: '提交成功', code: 200 });
