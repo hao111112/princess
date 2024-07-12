@@ -224,12 +224,11 @@
    // 获取需要跟踪的元素
    var beforeAppointElement = document.querySelector('.appoint');
    var appointElement = document.querySelector('.button');
-   var commitElement = document.querySelector('.commit');
 
    // 标志,记录是否已经触发过跟踪事件
    var hasTriggeredBeforeAppointEvent = false;
    var hasTriggeredAppointEvent = false;
-   var hasTriggeredCommitEvent = false;
+   
 
    // 设置 IntersectionObserver 观察元素
    var observer = new IntersectionObserver(function(entries) {

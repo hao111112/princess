@@ -5,6 +5,7 @@ if (screenWidth < 768) {
 // 屏幕宽度小于 768px，跳转至移动端页面
 window.location.href = "/finalPrincessPhone/index.html";
 }
+var hasTriggeredCommitEvent = false;
 let phoneInput = document.getElementById('phoneText');
 let AgreeCheck = document.getElementById('agreeCheck');
 const selectRegions = document.querySelectorAll('.selectRegion');
@@ -186,6 +187,13 @@ commitPhoneElement.addEventListener('click', () => {
       return;
     }else{
  // 在这里添加其他成功后的逻辑
+ if(!hasTriggeredCommitEvent){
+  window.appier_q = window.appier_q || [];
+window.appier_q.push(
+{"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},
+{"t": "type_conversion", "content": "submit", "action_id": "Conversion_1c13", "track_id": "341bceabc059320", "opts": {"unique_key": "true"}})
+      console.log('Commit Tracking event triggered!');
+ }
     // 获取弹窗元素
     let modal = document.querySelector('.modal-container');
      modal.style.display="block"

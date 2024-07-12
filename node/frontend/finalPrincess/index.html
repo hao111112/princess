@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://register.princesscantdefend.com/finalPrincess/index.html">
   <meta property="og:image" content="https://register.princesscantdefend.com/finalPrincess/images/og.png">
   <meta property="og:type" content="website">
-     <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -217,12 +217,12 @@
       // 获取需要跟踪的元素
       var beforeAppointElement = document.querySelector('.beforeappoint');
       var appointElement = document.querySelector('.appoint');
-      var commitElement = document.querySelector('.commit');
+
 
       // 标志,记录是否已经触发过跟踪事件
       var hasTriggeredBeforeAppointEvent = false;
       var hasTriggeredAppointEvent = false;
-      var hasTriggeredCommitEvent = false;
+
 
       // 设置 IntersectionObserver 观察元素
       var observer = new IntersectionObserver(function(entries) {
@@ -237,18 +237,14 @@
             triggerAppointTrackingEvent();
             hasTriggeredAppointEvent = true;
           }
-          // 如果 commit 元素进入视窗区域,且还没有触发过跟踪事件
-          else if (entry.target === commitElement && entry.isIntersecting && !hasTriggeredCommitEvent) {
-            triggerCommitTrackingEvent();
-            hasTriggeredCommitEvent = true;
-          }
+        
         });
       });
 
       // 开始观察各个元素
       observer.observe(beforeAppointElement);
       observer.observe(appointElement);
-      observer.observe(commitElement);
+    
     });
     function triggerBeforeAppointTrackingEvent() {
       window.appier_q = window.appier_q || [];
@@ -268,14 +264,7 @@ window.appier_q.push(
       // 您可以在这里添加发送跟踪数据的代码
     }
 
-    function triggerCommitTrackingEvent() {
-      window.appier_q = window.appier_q || [];
-window.appier_q.push(
-{"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},
-{"t": "type_conversion", "content": "submit", "action_id": "Conversion_1c13", "track_id": "341bceabc059320", "opts": {"unique_key": "true"}})
-      console.log('Commit Tracking event triggered!');
-      // 您可以在这里添加发送跟踪数据的代码
-    }
+    
       </script>
 </body>
 </html>

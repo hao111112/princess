@@ -4,6 +4,7 @@ let phoneInput = document.getElementById('phoneText');
 let AgreeCheck = document.getElementById('agreeCheck');
 const selectRegions = document.querySelectorAll('.selectRegion');
 const commitPhoneElement = document.getElementById('commit');
+var hasTriggeredCommitEvent = false;
 const phoneRegex = {
   TW: /^[0-9]{9}$/,
   HK: /^[0-9]{8}$/,
@@ -17,7 +18,6 @@ phoneInput.addEventListener('input', (event) => {
     event.target.value = event.target.value.slice(0, 11);
   }
   event.target.value = event.target.value.replace(/\D/g, '');
-  console.log(event.target.value);
 });
 
 
@@ -106,7 +106,6 @@ function alertError(category,lang){
 // 提交按钮点击事件监听器
 commitPhoneElement.addEventListener('click', () => {
   // 检查复选框是否被勾选
-console.log(lang)
   // 检查手机号格式
   let phoneValue = phoneInput.value;
   if (phoneValue==='') {
@@ -176,11 +175,21 @@ console.log(lang)
   })
   .then(response => response.json())
   .then(data => {
-    console.log(data)
+   
     if(data.code!==200){
       alertError(4,lang);
       return;
     }else{
+
+ if(!hasTriggeredCommitEvent){
+  window.appier_q = window.appier_q || [];
+window.appier_q.push(
+{"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},
+{"t": "type_conversion", "content": "submit", "action_id": "Conversion_1c13", "track_id": "341bceabc059320", "opts": {"unique_key": "true"}})
+   console.log('Commit Tracking event triggered!');
+   hasTriggeredCommitEvent=t
+ }
+      
  // 在这里添加其他成功后的逻辑
     // 获取弹窗元素
     let modal = document.querySelector('.modal-container');
