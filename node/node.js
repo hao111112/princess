@@ -88,7 +88,28 @@ app.post('/api/commitPhone', (req, res) => {
     res.redirect('/finalPrincess/index.html');
   });
   // 创建 HTTP 服务器,并将请求重定向到 HTTPS
-
+  app.post('/save-params', (req, res) => {
+    const params = req.body;
+    if (Object.keys(params).length === 0) {
+      console.log('No params to save');
+      res.status(200).json({ message: 'No params to save' });
+      return;
+    }
+    // 构建 SQL 语句
+    const sql = 'INSERT INTO tracking_params (_atrk_c, _atrk_cr, _atrk_pt, _atrk_bi, _atrk_f) VALUES (?, ?, ?, ?, ?)';
+    const values = [params._atrk_c, params._atrk_cr, params._atrk_pt, params._atrk_bi, params._atrk_f];
+  
+    // 执行 SQL 语句
+    connection.query(sql, values, (err, result) => {
+      if (err) {
+        console.error('Error saving params:', err);
+        res.status(500).json({ error: 'Error saving params' });
+      } else {
+        console.log('Params saved successfully');
+        res.status(200).json({ message: 'Params saved successfully' });
+      }
+    });
+  });
 
 const options = {
   key: fs.readFileSync('./ssl/register.key'),

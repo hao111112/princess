@@ -215,7 +215,35 @@
 
   <script>
     
+    let paramsSaved = false;
     window.addEventListener('load', function() {
+    // 获取当前页面的 URL 查询参数
+
+// 检查是否已经执行过保存参数的操作
+if (!paramsSaved) {
+  const urlParams = new URLSearchParams(window.location.search);
+
+  // 将参数发送到后端
+  fetch('/save-params', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(Object.fromEntries(urlParams))
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log('Params saved successfully');
+      // 标记参数已保存
+      paramsSaved = true;
+    } else {
+      console.error('Error saving params');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+}
        //进入网页后触发
    window.appier_q = window.appier_q || [];
    window.appier_q.push( {"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},

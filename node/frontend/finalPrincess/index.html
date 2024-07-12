@@ -41,7 +41,7 @@
         <button class="close-button"></button>
         <!-- <p>感谢您的参与,敬请期待(公主守不了)正式上市!</p> -->
          <div class="textContent">
-          <p class="lang-success">你已经成功完成事前预约!<br>感谢您的参与,敬请期待《公主守不了》正式上市!</p>
+          <p class="lang-success">你已成功完成事前預約！<br>感謝您的參與，敬請期待《公主守不了》正式上市！</p>
           <p class="lang-official">關注官方社群</p> 
          </div>
         <div class="social-links">
@@ -207,8 +207,35 @@
     <script src="./js/i18n.js"></script>
     <script src="./js/index.js"></script>
     <script>
-    
+    let paramsSaved = false;
     window.addEventListener('load', function() {
+    // 获取当前页面的 URL 查询参数
+
+// 检查是否已经执行过保存参数的操作
+if (!paramsSaved) {
+  const urlParams = new URLSearchParams(window.location.search);
+
+  // 将参数发送到后端
+  fetch('/save-params', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(Object.fromEntries(urlParams))
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log('Params saved successfully');
+      // 标记参数已保存
+      paramsSaved = true;
+    } else {
+      console.error('Error saving params');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+}
        //进入网页后触发
    window.appier_q = window.appier_q || [];
    window.appier_q.push( {"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},
