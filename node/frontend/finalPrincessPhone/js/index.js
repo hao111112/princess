@@ -4,7 +4,6 @@ let phoneInput = document.getElementById('phoneText');
 let AgreeCheck = document.getElementById('agreeCheck');
 const selectRegions = document.querySelectorAll('.selectRegion');
 const commitPhoneElement = document.getElementById('commit');
-var hasTriggeredCommitEvent = false;
 const phoneRegex = {
   TW: /^[0-9]{9}$/,
   HK: /^[0-9]{8}$/,
@@ -103,6 +102,7 @@ function alertError(category,lang){
     }
   }
 }
+
 // 提交按钮点击事件监听器
 commitPhoneElement.addEventListener('click', () => {
   // 检查复选框是否被勾选
@@ -180,24 +180,11 @@ commitPhoneElement.addEventListener('click', () => {
       alertError(4,lang);
       return;
     }else{
-
- if(!hasTriggeredCommitEvent){
-  window.appier_q = window.appier_q || [];
-window.appier_q.push(
-{"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},
-{"t": "type_conversion", "content": "submit", "action_id": "Conversion_1c13", "track_id": "341bceabc059320", "opts": {"unique_key": "true"}})
-   console.log('Commit Tracking event triggered!');
-   hasTriggeredCommitEvent=t
- }
       
  // 在这里添加其他成功后的逻辑
     // 获取弹窗元素
     let modal = document.querySelector('.modal-container');
      modal.style.display="block"
-     window.appier_q = window.appier_q || [];
-window.appier_q.push(
-  {"t": "register", "content": { "id": "7835", "site": "princesscantdefend.com" }},
-  {"t": "type_landing", "action_id": "ViewLanding_e6b7", "track_id": "341bceabc059320", "opts": {"unique_key": "true"}})
     // 获取关闭按钮元素
     let closeButton = document.querySelector('.close-button');
     // 显示弹窗
