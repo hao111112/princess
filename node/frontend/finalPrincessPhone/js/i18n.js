@@ -47,7 +47,11 @@ const translations = {
       "lang-service": '服務條款',
       "princess_defend":"公主守不了",
       "warrior":"PVP塔防遊戲",
-      "lang-success":"你已成功完成事前預約！<br>感謝您的參與，敬請期待《公主守不了》正式上市！"
+      "lang-success":"你已成功完成事前預約！<br>感謝您的參與，敬請期待《公主守不了》正式上市！",
+      "bannerTitle1":"事前預約",
+      "bannerTitle2":"事前預約獎勵",
+      "bannerTitle3":"遊戲介紹",
+      "bannerTitle4":"注意事項",
   },
   en: {
    "lang-prize": 'Reward',
@@ -97,7 +101,11 @@ const translations = {
       "lang-service": 'Terms of Service',
      "princess_defend":"Princess Can't Defend",
       "warrior":"PVP Tower Defense Game",
-      "lang-success":"You have successfully completed your pre-registration!<br>Thank you for participating, and stay tuned for the official release of \"Princess Can't Defend!\""
+      "lang-success":"You have successfully completed your pre-registration!<br>Thank you for participating, and stay tuned for the official release of \"Princess Can't Defend!\"",
+      "bannerTitle1":"Register",
+      "bannerTitle2":"Rewards",
+      "bannerTitle3":"Gameplay",
+      "bannerTitle4":"Notice",
   },
   'ko': {
       "lang-prize": '선물',
@@ -147,7 +155,11 @@ const translations = {
       "lang-service": '서비스 약관',
       "princess_defend":"공주는 지킬 수 없다",
       "warrior":"PVP 타워 디펜스 게임",
-      "lang-success":"사전 예약을 성공적으로 완료하셨습니다!<br>참여해 주셔서 감사드리며, \"Princess Can't Defend\"의 정식 발매를 기대해 주세요!"
+      "lang-success":"사전 예약을 성공적으로 완료하셨습니다!<br>참여해 주셔서 감사드리며, \"Princess Can't Defend\"의 정식 발매를 기대해 주세요!",
+      "bannerTitle1":"등록",
+      "bannerTitle2":"보상",
+      "bannerTitle3":"게임플레이",
+      "bannerTitle4":"공지사항",
   },
   'ja': {
 "lang-prize": '特典',
@@ -197,7 +209,11 @@ const translations = {
 "lang-service": '利用規約',
 "princess_defend":"お姫様は守れない",
       "warrior":"PVPタワーディフェンスゲーム",
-      "lang-success":"事前登録が完了しました!<br>ご参加ありがとうございました、そして \"Princess Can't Defend\" の正式リリースをお楽しみに!"
+      "lang-success":"事前登録が完了しました!<br>ご参加ありがとうございました、そして \"Princess Can't Defend\" の正式リリースをお楽しみに!",
+      "bannerTitle1":"登録",
+      "bannerTitle2":"報酬",
+      "bannerTitle3":"ゲームプレイ",
+      "bannerTitle4":"お知らせ",
 },
 };
 
@@ -262,6 +278,10 @@ let lang='zh-TW';
      document.querySelector('.princess_defend').textContent = translations[lang]['princess_defend'];
      document.querySelector('.warrior').textContent = translations[lang]['warrior'];
      document.querySelector('.lang-success').innerHTML = translations[lang]['lang-success'];
+     document.querySelector('.bannerTitle1').textContent = translations[lang]['bannerTitle1'];
+     document.querySelector('.bannerTitle2').textContent = translations[lang]['bannerTitle2'];
+     document.querySelector('.bannerTitle3').textContent = translations[lang]['bannerTitle3'];
+     document.querySelector('.bannerTitle4').textContent = translations[lang]['bannerTitle4'];
      const logo = document.querySelector('.logo');
      const gameImg1=document.querySelector('.gameImg1');
      const gameImg2=document.querySelector('.gameImg2');

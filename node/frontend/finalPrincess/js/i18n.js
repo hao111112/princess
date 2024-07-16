@@ -44,7 +44,12 @@ const translations = {
         "lang-tip2": '本遊戲為免費使用，遊戲內另提供購買虛擬遊戲幣，物品等付費服務。',
         "lang-privacy": '隱私條款',
         "lang-service": '服務條款',
-      "lang-success":"你已成功完成事前預約！<br>感謝您的參與，敬請期待《公主守不了》正式上市！"
+      "lang-success":"你已成功完成事前預約！<br>感謝您的參與，敬請期待《公主守不了》正式上市！",
+      "bannerTitle1":"事前預約",
+      "bannerTitle2":"事前預約獎勵",
+      "bannerTitle3":"遊戲介紹",
+      "bannerTitle4":"注意事項",
+
     },
     en: {
      "lang-prize": 'Reward',
@@ -91,7 +96,11 @@ const translations = {
         "lang-tip2": 'This game is free to play, and there are also paid services such as purchasing virtual game currency and items in the game.',
         "lang-privacy": 'Privacy Policy',
         "lang-service": 'Terms of Service',
-      "lang-success":"You have successfully completed your pre-registration!<br>Thank you for participating, and stay tuned for the official release of \"Princess Can't Defend!\""
+      "lang-success":"You have successfully completed your pre-registration!<br>Thank you for participating, and stay tuned for the official release of \"Princess Can't Defend!\"",
+      "bannerTitle1":"Register",
+      "bannerTitle2":"Rewards",
+      "bannerTitle3":"Gameplay",
+      "bannerTitle4":"Notice",
     },
     'ko': {
         "lang-prize": '선물',
@@ -138,7 +147,11 @@ const translations = {
         "lang-tip2": '이 게임은 무료로 사용할 수 있으며 게임 내 가상 게임 화폐 및 아이템 구매와 같은 유료 서비스도 있습니다.',
         "lang-privacy": '개인정보처리방침',
         "lang-service": '서비스 약관',
-      "lang-success":"사전 예약을 성공적으로 완료하셨습니다!<br>참여해 주셔서 감사드리며, \"Princess Can't Defend\"의 정식 발매를 기대해 주세요!"
+      "lang-success":"사전 예약을 성공적으로 완료하셨습니다!<br>참여해 주셔서 감사드리며, \"Princess Can't Defend\"의 정식 발매를 기대해 주세요!",
+      "bannerTitle1":"등록",
+      "bannerTitle2":"보상",
+      "bannerTitle3":"게임플레이",
+      "bannerTitle4":"공지사항",
     },
     'ja': {
 "lang-prize": '特典',
@@ -185,7 +198,11 @@ const translations = {
 "lang-tip2": 'このゲームは無料で遊べるほか、ゲーム内の仮想ゲーム通貨やアイテムの購入などの有料サービスもあります。',
 "lang-privacy": 'プライバシーポリシー',
 "lang-service": '利用規約',
-        "lang-success":"事前登録が完了しました!<br>ご参加ありがとうございました、そして \"Princess Can't Defend\" の正式リリースをお楽しみに!"
+        "lang-success":"事前登録が完了しました!<br>ご参加ありがとうございました、そして \"Princess Can't Defend\" の正式リリースをお楽しみに!",
+        "bannerTitle1":"登録",
+        "bannerTitle2":"報酬",
+        "bannerTitle3":"ゲームプレイ",
+        "bannerTitle4":"お知らせ",
 },
   };
 
@@ -238,6 +255,10 @@ const translations = {
         document.querySelector('.lang-tip1').textContent = translations[lang]['lang-tip1'];
         document.querySelector('.lang-tip2').textContent = translations[lang]['lang-tip2'];
         document.querySelector('.lang-success').innerHTML = translations[lang]['lang-success'];
+        document.querySelector('.bannerTitle1').textContent = translations[lang]['bannerTitle1'];
+        document.querySelector('.bannerTitle2').textContent = translations[lang]['bannerTitle2'];
+        document.querySelector('.bannerTitle3').textContent = translations[lang]['bannerTitle3'];
+        document.querySelector('.bannerTitle4').textContent = translations[lang]['bannerTitle4'];
        const privacy= document.querySelector('.lang-privacy');
        privacy.textContent = translations[lang]['lang-privacy'];
        const service= document.querySelector('.lang-service');
