@@ -34,7 +34,7 @@ const translations = {
       "lang-num4":"500,000人",
       "lang-prize2": '寶石X200',
       "lang-prize3": '隨機紫卡X5',
-      "lang-prize4": '金色稀有度公主 － 雨蘭',
+      "lang-prize4": '金色稀有度公主<br> － 雨蘭',
       "lang-attentionT": '事前登錄網站',
       "lang-attention1": '(1) 事前登錄活動時間為：即日起至遊戲正式上線前結束。',
       "lang-attention2": '(2) 成功參與事前登錄的玩家，可在遊戲正式上線時收到禮包碼簡訊，遊戲上線後即可在遊戲內兌換獎勵。',
@@ -88,7 +88,7 @@ const translations = {
       "lang-prize1": 'Coins x 888',
       "lang-prize2": 'Gem X200',
       "lang-prize3": 'Random Purple Card x 5',
-      "lang-prize4": 'Golden Rarity Princess - Yulan',
+      "lang-prize4": 'Golden Rarity Princess<br> - Yulan',
       "lang-attentionT": 'Terms',
       "lang-attention1": '(1) The pre-registration activity period is from now until the official game launch.',
       "lang-attention2": '(2) Players who successfully participate in the pre-registration event can receive a gift code SMS when the game is officially launched, and can redeem rewards in the game after the game is launched.',
@@ -142,7 +142,7 @@ const translations = {
       "lang-prize1": '코인 x 888',
       "lang-prize2": '보석 x 200', 
       "lang-prize3": '랜덤 퍼플카드 x 5',
-      "lang-prize4": '골든 레리티 프린세스 - Yulan',
+      "lang-prize4": '골든 레리티 프린세스<br> - Yulan',
       "lang-attentionT": '약관',
       "lang-attention1": '(1) 사전등록 활동 기간은 지금부터 정식 게임 출시일까지입니다.',
       "lang-attention2": '(2) 사전등록 이벤트에 성공적으로 참여한 플레이어는 게임 정식 출시 시 선물코드 SMS를 받을 수 있으며, 게임 출시 후 게임 내에서 보상을 교환할 수 있습니다.',
@@ -196,7 +196,7 @@ const translations = {
 "lang-prize1": 'コイン×888',
 "lang-prize2": 'ジェム×200',
 "lang-prize3": 'ランダムパープルカード×5',
-"lang-prize4": 'ゴールデンレアリティプリンセス - Yulan',
+"lang-prize4": 'ゴールデンレアリティプリンセス<br> - Yulan',
 "lang-attentionT": '条項',
 "lang-attention1": '(1)事前登録活動期間は、今から正式ゲーム発売までです。',
 "lang-attention2": '(2) 事前登録イベントに無事に参加したプレイヤーは、ゲームが正式にリリースされたときにギフトコードSMSを受け取ることができ、ゲームローンチ後にゲーム内で報酬を引き換えることができます。',
@@ -261,7 +261,7 @@ let lang='zh-TW';
 
       document.querySelector('.lang-prize3').textContent = translations[lang]['lang-prize3'];
     
-      document.querySelector('.lang-prize4').textContent = translations[lang]['lang-prize4'];
+      document.querySelector('.lang-prize4').innerHTML = translations[lang]['lang-prize4'];
      
       document.querySelector('.lang-attentionT').textContent = translations[lang]['lang-attentionT'];
       document.querySelector('.lang-attention1').textContent = translations[lang]['lang-attention1'];

@@ -170,6 +170,7 @@ html{
   width: 100%;
   background-color: white;
   font-size: .3rem;
+  padding-left: 0.04rem;
 }
 .selectRegion:hover{
   cursor: grab;

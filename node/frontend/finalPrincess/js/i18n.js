@@ -32,7 +32,7 @@ const translations = {
         "lang-condition2": '預約人數達到<br>200,000人',
         "lang-prize3": '隨機紫卡X5',
         "lang-condition3": '預約人數達到<br>300,000人',
-        "lang-prize4": '金色稀有度公主 － 雨蘭',
+        "lang-prize4": '金色稀有度公主<br> － 雨蘭',
         "lang-condition4": '預約人數達到<br>500,000人',
         "lang-attentionT": '事前登錄網站',
         "lang-attention1": '(1) 事前登錄活動時間為：即日起至遊戲正式上線前結束。',
@@ -84,7 +84,7 @@ const translations = {
         "lang-condition2": '200,000 <br>pre-registrations',
         "lang-prize3": 'Random Purple Card x 5',
         "lang-condition3": '300,000 <br>pre-registrations',
-        "lang-prize4": 'Golden Rarity Princess - Yulan',
+        "lang-prize4": 'Golden Rarity Princess<br> - Yulan',
         "lang-condition4": '500,000 <br>pre-registrations',
         "lang-attentionT": 'Terms',
         "lang-attention1": '(1) The pre-registration activity period is from now until the official game launch.',
@@ -135,7 +135,7 @@ const translations = {
         "lang-condition2": '200,000명 <br>사전등록',
         "lang-prize3": '랜덤 퍼플카드 x 5',
         "lang-condition3": '300,000명<br>사전예약',
-        "lang-prize4": '골든 레리티 프린세스 - Yulan',
+        "lang-prize4": '골든 레리티 프린세스<br> - Yulan',
         "lang-condition4": '500,000명<br>사전등록',
         "lang-attentionT": '약관',
         "lang-attention1": '(1) 사전등록 활동 기간은 지금부터 정식 게임 출시일까지입니다.',
@@ -186,7 +186,7 @@ const translations = {
 "lang-condition2": '200,000<br>事前登録者数',
 "lang-prize3": 'ランダムパープルカード×5',
 "lang-condition3": '300,000<br>事前登録者数',
-"lang-prize4": 'ゴールデンレアリティプリンセス - Yulan',
+"lang-prize4": 'ゴールデンレアリティプリンセス<br> - Yulan',
 "lang-condition4": '500,000<br>事前登録者数',
 "lang-attentionT": '条項',
 "lang-attention1": '(1)事前登録活動期間は、今から正式ゲーム発売までです。',
@@ -244,7 +244,7 @@ const translations = {
         document.querySelector('.lang-condition2').innerHTML = translations[lang]['lang-condition2'];
         document.querySelector('.lang-prize3').textContent = translations[lang]['lang-prize3'];
         document.querySelector('.lang-condition3').innerHTML = translations[lang]['lang-condition3'];
-        document.querySelector('.lang-prize4').textContent = translations[lang]['lang-prize4'];
+        document.querySelector('.lang-prize4').innerHTML = translations[lang]['lang-prize4'];
         document.querySelector('.lang-condition4').innerHTML = translations[lang]['lang-condition4'];
         document.querySelector('.lang-attentionT').textContent = translations[lang]['lang-attentionT'];
         document.querySelector('.lang-attention1').textContent = translations[lang]['lang-attention1'];
