@@ -310,7 +310,7 @@ html{
     width: 100%;
     background-color: white;
     z-index: 15;
-    padding-left: 0.04rem;
+    text-indent: 0.02rem;
   }
   .selectRegion:hover{
     cursor: grab;

@@ -18,6 +18,15 @@ const translations = {
       "lang-CO-phone": '澳門 +853',
       "lang-KO-phone": '韓國 +82',
       "lang-JP-phone": '日本 +81',
+      "lang-VN-phone": '越南 +84',
+      "lang-KH-phone": '柬埔寨 +855',
+      "lang-TH-phone": '泰國 +66',
+      "lang-MM-phone": '緬甸 +95',
+      "lang-MY-phone": '馬來西亞 +60',
+      "lang-SG-phone": '新加坡 +65',
+      "lang-ID-phone": '印度尼西亞 +62',
+      "lang-PH-phone": '菲律賓 +63',
+      "lang-IN-phone": '印度 +91',
       "lang-inputPhone": '填寫手機號碼即可完成預約拿好禮',
       "lang-agree": '同意隱私政策使用及接收獎勵資訊',
       "lang-box1t2": '限時菁英封測',
@@ -72,6 +81,15 @@ const translations = {
       "lang-CO-phone": 'Macau +853',
       "lang-KO-phone": 'Korea +82',
       "lang-JP-phone": 'Japan +81',
+      "lang-VN-phone": 'Vietnam +84',
+        "lang-KH-phone": 'Cambodia +855',
+        "lang-TH-phone": 'Thailand +66',
+        "lang-MM-phone": 'Myanmar +95',
+        "lang-MY-phone": 'Malaysia +60',
+        "lang-SG-phone": 'Singapore +65',
+        "lang-ID-phone": 'Indonesia +62',
+        "lang-PH-phone": 'Philippines +63',
+        "lang-IN-phone": 'India +91',
       "lang-inputPhone": 'Please enter your phone number',
       "lang-agree": 'Agree to the Privacy Policy for the use and receipt of reward information',
       "lang-box1t2": 'Limited Elite Beta Test',
@@ -88,7 +106,7 @@ const translations = {
       "lang-prize1": 'Coins x 888',
       "lang-prize2": 'Gem X200',
       "lang-prize3": 'Random Purple Card x 5',
-      "lang-prize4": 'Golden Rarity Princess<br> - Yulan',
+      "lang-prize4": 'Ultra Rare Princess<br> - Yulan',
       "lang-attentionT": 'Terms',
       "lang-attention1": '(1) The pre-registration activity period is from now until the official game launch.',
       "lang-attention2": '(2) Players who successfully participate in the pre-registration event can receive a gift code SMS when the game is officially launched, and can redeem rewards in the game after the game is launched.',
@@ -126,6 +144,15 @@ const translations = {
       "lang-CO-phone": '마카오 +853',
       "lang-KO-phone": '한국 +82',
       "lang-JP-phone": '일본 +81',
+      "lang-VN-phone": '베트남 +84',
+        "lang-KH-phone": '캄보디아 +855',
+        "lang-TH-phone": '태국 +66',
+        "lang-MM-phone": '미얀마 +95',
+        "lang-MY-phone": '말레이시아 +60',
+        "lang-SG-phone": '싱가포르 +65',
+        "lang-ID-phone": '인도네시아 +62',
+        "lang-PH-phone": '필리핀 +63',
+        "lang-IN-phone": '인도 +91',
       "lang-inputPhone": '휴대 전화 번호를 입력하십시오',
       "lang-agree": '보너스 정보의 사용 및 수령에 대한 개인 정보 보호 정책에 동의합니다.',
       "lang-box1t2": '한정 엘리트 베타 테스트',
@@ -180,6 +207,15 @@ const translations = {
       "lang-CO-phone": 'マカオ +853',
       "lang-KO-phone": '韓国 +82',
       "lang-JP-phone": '日本 +81',
+      "lang-VN-phone": 'ベトナム +84',
+      "lang-KH-phone": 'カンボジア +855',
+      "lang-TH-phone": 'タイ +66',
+      "lang-MM-phone": 'ミャンマー +95',
+      "lang-MY-phone": 'マレーシア +60',
+      "lang-SG-phone": 'シンガポール +65',
+      "lang-ID-phone": 'インドネシア +62',
+      "lang-PH-phone": 'フィリピン +63',
+      "lang-IN-phone": 'インド +91',
 "lang-inputPhone": '携帯番号を入力して登録特典をゲット',
 "lang-agree": '報酬情報の使用と受け取りに関するプライバシーポリシーに同意する',
 "lang-box1t2": '期間限定エリートCBテスト',
@@ -196,7 +232,7 @@ const translations = {
 "lang-prize1": 'コイン×888',
 "lang-prize2": 'ジェム×200',
 "lang-prize3": 'ランダムパープルカード×5',
-"lang-prize4": 'ゴールデンレアリティプリンセス<br> - Yulan',
+"lang-prize4": 'ゴールデンレアリティプリンセス - Yulan',
 "lang-attentionT": '条項',
 "lang-attention1": '(1)事前登録活動期間は、今から正式ゲーム発売までです。',
 "lang-attention2": '(2) 事前登録イベントに無事に参加したプレイヤーは、ゲームが正式にリリースされたときにギフトコードSMSを受け取ることができ、ゲームローンチ後にゲーム内で報酬を引き換えることができます。',
@@ -237,7 +273,17 @@ let lang='zh-TW';
       document.querySelector('.lang-CO-phone').textContent = translations[lang]['lang-CO-phone'];
       document.querySelector('.lang-KO-phone').textContent = translations[lang]['lang-KO-phone'];
       document.querySelector('.lang-JP-phone').textContent = translations[lang]['lang-JP-phone'];
-  
+      document.querySelector('.lang-VN-phone').textContent = translations[lang]['lang-VN-phone'];
+        
+      document.querySelector('.lang-KH-phone').textContent = translations[lang]['lang-KH-phone'];
+      document.querySelector('.lang-TH-phone').textContent = translations[lang]['lang-TH-phone'];
+      document.querySelector('.lang-MM-phone').textContent = translations[lang]['lang-MM-phone'];
+      document.querySelector('.lang-MY-phone').textContent = translations[lang]['lang-MY-phone'];
+      document.querySelector('.lang-SG-phone').textContent = translations[lang]['lang-SG-phone'];
+      document.querySelector('.lang-MY-phone').textContent = translations[lang]['lang-MY-phone'];
+      document.querySelector('.lang-ID-phone').textContent = translations[lang]['lang-ID-phone'];
+      document.querySelector('.lang-PH-phone').textContent = translations[lang]['lang-PH-phone'];
+      document.querySelector('.lang-IN-phone').textContent = translations[lang]['lang-IN-phone'];
       document.querySelector('.lang-inputPhone').placeholder  = translations[lang]['lang-inputPhone'];
      const lang_agree= document.querySelector('.lang-agree');
      lang_agree.textContent = translations[lang]['lang-agree'];
@@ -288,6 +334,7 @@ let lang='zh-TW';
      const gameImg3=document.querySelector('.gameImg3');
      const gameImg4=document.querySelector('.gameImg4');
      const gameImg5=document.querySelector('.gameImg5');
+     const facebook = document.querySelectorAll('.lang-facebook');
      if(lang==='zh-TW'){
       lang_agree.href="Tnc.html"
       privacy.href="Privacy.html"
@@ -298,6 +345,9 @@ let lang='zh-TW';
    gameImg3.src='/finalPrincessPhone/images/main/box4/intro3.png';
    gameImg4.src='/finalPrincessPhone/images/main/box4/intro4.png';
    gameImg5.src='/finalPrincessPhone/images/main/box4/intro5.png';
+      facebook.forEach((item)=>{
+        item.href="https://www.facebook.com/princesscantdefend"
+      })
     }else{
       lang_agree.href="../finalPrincess/TncEN.html"
       privacy.href="../finalPrincess/PrivacyEN.html"
@@ -308,6 +358,9 @@ let lang='zh-TW';
       gameImg3.src='/finalPrincessPhone/images/main/box4/intro3EN.png';
       gameImg4.src='/finalPrincessPhone/images/main/box4/intro4EN.png';
       gameImg5.src='/finalPrincessPhone/images/main/box4/intro5EN.png';
+      facebook.forEach((item)=>{
+        item.href="https://www.facebook.com/profile.php?id=61563139963927"
+      })
     }
     }
 

@@ -138,8 +138,8 @@ html{
   align-items: center;
   width: 6rem;
   height: .8rem;
-  top: 1.6rem; 
-  left: .8333rem;
+  top: 26.8rem; 
+  left: 1.7rem;
   box-sizing: border-box;
   z-index: 30;
 }
@@ -169,7 +169,7 @@ html{
   height: 100%;
   width: 100%;
   background-color: white;
-  font-size: .3rem;
+  font-size: .2rem;
   padding-left: 0.04rem;
 }
 .selectRegion:hover{
@@ -292,7 +292,7 @@ html{
 }
  .attend{
   position: absolute;
-  top: 0.1rem;
+  top: 31.8rem;
   left: 50%;
   transform: translateX(-50%);
     width: 2rem;
@@ -304,6 +304,7 @@ html{
     color: #FFFFFF;
     font-size: .25rem;
     line-height: 0.8rem;
+    z-index: 99;
 }
 .box1 .content2 .attend:hover{
   cursor: pointer;

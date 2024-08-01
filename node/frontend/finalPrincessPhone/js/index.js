@@ -9,7 +9,16 @@ const phoneRegex = {
   HK: /^[0-9]{8}$/,
   MO: /^[0-9]{8}$/,
   JP: /^[0-9]{10}$/,
-  KR: /^[0-9]{10,11}$/
+  KR: /^[0-9]{10,11}$/,
+  VN: /^(\+84|0[1-9])[0-9]{8,10}$/,
+  KH: /^(\+855|0[1-9])[0-9]{8,9}$/,
+  TH: /^(\+66|0[1-9])[0-9]{8,9}$/,
+  MM: /^(\+95|0[1-9])[0-9]{6,8}$/,
+  MY: /^(\+60|0[1-9])[0-9]{7,9}$/,
+  SG: /^(\+65|0[1-9])[0-9]{7,10}$/,
+  ID: /^(\+62|0[1-9])[0-9]{7,10}$/,
+  PH: /^(\+63|0[1-9])[0-9]{7,10}$/,
+  IN: /^(\+91|0[1-9])[0-9]{9,10}$/
 };
 // 手机号输入监听器
 phoneInput.addEventListener('input', (event) => {
@@ -121,40 +130,95 @@ commitPhoneElement.addEventListener('click', () => {
   // 检查下拉框选择情况
   let selectedRegion = selectRegions[0].getAttribute('value');
   if (selectedRegion === 'none') {
-    alertError(3,lang);
+    alertError(3, lang);
     return;
   }
-
-  if(selectedRegion==="886"){
-    if(!phoneRegex.TW.test(phoneValue)){
-      alertError(1,lang)
-      return
+  
+  if (selectedRegion === "886") {
+    if (!phoneRegex.TW.test(phoneValue)) {
+      alertError(1, lang);
+      return;
     }
   }
-  if(selectedRegion==="852"){
-    if(!phoneRegex.HK.test(phoneValue)){
-      alertError(1,lang)
-      return
+  if (selectedRegion === "852") {
+    if (!phoneRegex.HK.test(phoneValue)) {
+      alertError(1, lang);
+      return;
     }
   }
-  if(selectedRegion==="853"){
-    if(!phoneRegex.MO.test(phoneValue)){
-      alertError(1,lang)
-      return
+  if (selectedRegion === "853") {
+    if (!phoneRegex.MO.test(phoneValue)) {
+      alertError(1, lang);
+      return;
     }
   }
-  if(selectedRegion==="81"){
-    if(!phoneRegex.JP.test(phoneValue)){
-      alertError(1,lang)
-      return
+  if (selectedRegion === "81") {
+    if (!phoneRegex.JP.test(phoneValue)) {
+      alertError(1, lang);
+      return;
     }
   }
-  if(selectedRegion==="82"){
-    if(!phoneRegex.KR.test(phoneValue)){
-      alertError(1,lang)
-      return
+  if (selectedRegion === "82") {
+    if (!phoneRegex.KR.test(phoneValue)) {
+      alertError(1, lang);
+      return;
     }
   }
+  if (selectedRegion === "84") {
+    if (!phoneRegex.VN.test(phoneValue)) {
+      alertError(1, lang);
+      return;
+    }
+  }
+  if (selectedRegion === "855") {
+    if (!phoneRegex.KH.test(phoneValue)) {
+      alertError(1, lang);
+      return;
+    }
+  }
+  if (selectedRegion === "66") {
+    if (!phoneRegex.TH.test(phoneValue)) {
+      alertError(1, lang);
+      return;
+    }
+  }
+  if (selectedRegion === "95") {
+    if (!phoneRegex.MM.test(phoneValue)) {
+      alertError(1, lang);
+      return;
+    }
+  }
+  if (selectedRegion === "60") {
+    if (!phoneRegex.MY.test(phoneValue)) {
+      alertError(1, lang);
+      return;
+    }
+  }
+  if (selectedRegion === "65") {
+    if (!phoneRegex.SG.test(phoneValue)) {
+      alertError(1, lang);
+      return;
+    }
+  }
+  if (selectedRegion === "62") {
+    if (!phoneRegex.ID.test(phoneValue)) {
+      alertError(1, lang);
+      return;
+    }
+  }
+  if (selectedRegion === "63") {
+    if (!phoneRegex.PH.test(phoneValue)) {
+      alertError(1, lang);
+      return;
+    }
+  }
+  if (selectedRegion === "91") {
+    if (!phoneRegex.IN.test(phoneValue)) {
+      alertError(1, lang);
+      return;
+    }
+  }
+  
 
   let isAgreeCheck = AgreeCheck.checked;
   console.log('isAgreeCheck:', isAgreeCheck);
