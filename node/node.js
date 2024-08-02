@@ -117,5 +117,5 @@ const options = {
   ca: fs.readFileSync('./ssl/register_princesscantdefend_com.ca-bundle')
 };
 
-https.createServer(options, app).listen(8080,()=>{console.log('Server is running on https://localhost:8080');})
+https.createServer(options, app).listen(443,()=>{console.log('Server is running on https://localhost:443');})
  

@@ -16,22 +16,6 @@
 <meta property="og:url" content="https://register.princesscantdefend.com/finalPrincess/index.html">
 <meta property="og:image" content="https://register.princesscantdefend.com/finalPrincess/images/ogEN.png">
 <meta property="og:type" content="website">
-
-<!-- Alternate language versions -->
-<meta property="og:locale:alternate" content="zh_TW" />
-<meta property="og:title:alternate" lang="zh_TW" content="像素風塔防手機遊戲《公主守不了》事前預約火熱進行中" />
-<meta property="og:description:alternate" lang="zh_TW" content="立即預約領好禮，解鎖終極大獎金卡公主！" />
-<meta property="og:image:alternate" lang="zh_TW" content="https://register.princesscantdefend.com/finalPrincess/images/og.png" />
-
-<meta property="og:locale:alternate" content="ja_JP" />
-<meta property="og:title:alternate" lang="ja_JP" content="ピクセルタワーディフェンスモバイルゲーム「プリンセスは守りきれない」の事前登録が熱い" />
-<meta property="og:description:alternate" lang="ja_JP" content="今すぐ登録してプレゼントをゲット!最高の賞品カードプリンセスにアクセス!" />
-<meta property="og:image:alternate" lang="ja_JP" content="https://register.princesscantdefend.com/finalPrincess/images/ogEN.png" />
-
-<meta property="og:locale:alternate" content="ko_KR" />
-<meta property="og:title:alternate" lang="ko_KR" content="픽셀 타워 디펜스 모바일 게임 '공주는 지킬 수 없어'의 사전 등록이 뜨겁습니다" />
-<meta property="og:description:alternate" lang="ko_KR" content="지금 등록하고 선물을 받으세요! 최고의 상품 카드 공주에게 접근하세요!" />
-<meta property="og:image:alternate" lang="ko_KR" content="https://register.princesscantdefend.com/finalPrincess/images/ogEN.png" />
  <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -50,7 +34,27 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
     <script src="//jscdn.appier.net/aa.js?id=princesscantdefend.com" async></script>
-
+    <script>
+      // 获取用户浏览器语言
+      var userLang = navigator.language || navigator.userLanguage;
+    
+      // 根据语言设置 Open Graph 标签内容
+      if (userLang.startsWith('zh')) {
+        document.querySelector('meta[property="og:title:alternate"]').content = '像素風塔防手機遊戲《公主守不了》事前預約火熱進行中';
+        document.querySelector('meta[property="og:description:alternate"]').content = '立即預約領好禮，解鎖終極大獎金卡公主！';
+        document.querySelector('meta[property="og:image:alternate"]').content = 'https://register.princesscantdefend.com/finalPrincess/images/og.png';
+      } else if (userLang.startsWith('ja')) {
+        document.querySelector('meta[property="og:title:alternate"]').content = 'ピクセルタワーディフェンスモバイルゲーム「プリンセスは守りきれない」の事前登録が熱い';
+        document.querySelector('meta[property="og:description:alternate"]').content = '今すぐ登録してプレゼントをゲット!最高の賞品カードプリンセスにアクセス!';
+        document.querySelector('meta[property="og:image:alternate"]').content = 'https://register.princesscantdefend.com/finalPrincess/images/ogEN.png';
+      } else if (userLang.startsWith('ko')) {
+        document.querySelector('meta[property="og:title:alternate"]').content = '픽셀 타워 디펜스 모바일 게임 \'공주는 지킬 수 없어\'의 사전 등록이 뜨겁습니다';
+        document.querySelector('meta[property="og:description:alternate"]').content = '지금 등록하고 선물을 받으세요! 최고의 상품 카드 공주에게 접근하세요!';
+        document.querySelector('meta[property="og:image:alternate"]').content = 'https://register.princesscantdefend.com/finalPrincess/images/ogEN.png';
+      }
+    
+    
+    </script>
 </head>
 <body>
   
