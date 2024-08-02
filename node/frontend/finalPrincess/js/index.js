@@ -303,16 +303,7 @@ attend.addEventListener('click', () => {
 }
 )
 
-var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-	  centeredSlides: true,
-	  loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
+
     
     var swiper1 = new Swiper(".mySwiper1", {
       effect: "cards",
