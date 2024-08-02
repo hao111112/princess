@@ -134,12 +134,12 @@ app.get('/', (req, res) => {
       case 'ja': // 日本语
           title = 'ピクセルタワーディフェンスモバイルゲーム「プリンセスは守りきれない」の事前登録が熱い';
           description = '今すぐ登録してプレゼントをゲット!最高の賞品カードプリンセスにアクセス!';
-          image = 'https://register.princesscantdefend.com/finalPrincess/images/ogJP.png';
+          image = 'https://register.princesscantdefend.com/finalPrincess/images/ogEN.png';
           break;
       case 'ko': // 韩语
           title = '픽셀 타워 디펜스 모바일 게임 \'공주는 지킬 수 없어\'의 사전 등록이 뜨겁습니다';
           description = '지금 등록하고 선물을 받으세요! 최고의 상품 카드 공주에게 접근하세요!';
-          image = 'https://register.princesscantdefend.com/finalPrincess/images/ogKR.png';
+          image = 'https://register.princesscantdefend.com/finalPrincess/images/ogEN.png';
           break;
       default: // 英语
           title = "Pixel tower defense mobile game 'Princess Can't Defend' pre-registration is hot";
