@@ -252,8 +252,29 @@ const translations = {
       "bannerTitle4":"お知らせ",
 },
 };
+let isFirstCome=true;
+let lang='en';
+function detectLanguage() {
+ const language = navigator.language || navigator.userLanguage;
 
-let lang='zh-TW';
+ if (language.startsWith('zh')) {
+   return 'zh-TW';
+ } else if (language.startsWith('ja')) {
+   return 'ja';
+ } else if (language.startsWith('en')) {
+   return 'en';
+ }else if (language.startsWith('ko')) {
+   return 'ko';} 
+ else {
+   return 'en';
+ }
+}
+if(isFirstCome){
+  lang = detectLanguage();
+  switchLanguage(lang)
+  isFirstCome=false;
+}
+
   function switchLanguage(lang) {
       // 更新页面内容
       document.querySelector('.lang-prize').textContent = translations[lang]['lang-prize'];
