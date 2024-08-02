@@ -117,5 +117,58 @@ const options = {
   ca: fs.readFileSync('./ssl/register_princesscantdefend_com.ca-bundle')
 };
 
+
+app.get('/', (req, res) => {
+  // 获取用户的语言
+  const lang = req.acceptsLanguages(['zh-TW', 'ja', 'ko']) || 'en'; // 默认英语
+
+  let title, description, image, url;
+
+  // 根据语言设置 Open Graph 数据
+  switch (lang) {
+      case 'zh-TW': // 繁体中文
+          title = '像素風塔防手機遊戲《公主守不了》事前預約火熱進行中';
+          description = '立即預約領好禮，解鎖終極大獎金卡公主！';
+          image = 'https://register.princesscantdefend.com/finalPrincess/images/og.png';
+          break;
+      case 'ja': // 日本语
+          title = 'ピクセルタワーディフェンスモバイルゲーム「プリンセスは守りきれない」の事前登録が熱い';
+          description = '今すぐ登録してプレゼントをゲット!最高の賞品カードプリンセスにアクセス!';
+          image = 'https://register.princesscantdefend.com/finalPrincess/images/ogEN.png';
+          break;
+      case 'ko': // 韩语
+          title = '픽셀 타워 디펜스 모바일 게임 \'공주는 지킬 수 없어\'의 사전 등록이 뜨겁습니다';
+          description = '지금 등록하고 선물을 받으세요! 최고의 상품 카드 공주에게 접근하세요!';
+          image = 'https://register.princesscantdefend.com/finalPrincess/images/ogEN.png';
+          break;
+      default: // 英语
+          title = "Pixel tower defense mobile game 'Princess Can't Defend' pre-registration is hot";
+          description = "Register now to receive gifts and unlock the ultimate prize card princess!";
+          image = 'https://register.princesscantdefend.com/finalPrincess/images/ogEN.png';
+          break;
+  }
+
+  // 返回包含 Open Graph 标签的 HTML 页面
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="${lang}">
+    <head>
+        <meta charset="UTF-8">
+        <meta property="og:title" content="${title}" />
+        <meta property="og:description" content="${description}" />
+        <meta property="og:url" content="https://register.princesscantdefend.com/finalPrincess/index.html" />
+        <meta property="og:image" content="${image}" />
+        <meta property="og:type" content="website" />
+        <title>${title}</title>
+    </head>
+    <body>
+        <h1>${title}</h1>
+        <p>${description}</p>
+        <img src="${image}" alt="游戏图片" />
+    </body>
+    </html>
+  `);
+});
+
 https.createServer(options, app).listen(443,()=>{console.log('Server is running on https://localhost:443');})
  
