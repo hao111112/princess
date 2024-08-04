@@ -126,10 +126,10 @@ app.get('/', (req, res) => {
   const lang = req.acceptsLanguages(['zh-TW', 'ja', 'ko', 'en']) || 'en';
   if(lang.startsWith('zh')){
    // res.redirect('/finalPrincess/index.html');
-   res.redirect('/finalPrincessEN/index.html');
+   res.redirect('/finalPrincess/index.html');
   }else{
     //res.redirect('/finalPrincessEN/index.html');
-    res.redirect('/finalPrincess/index.html');
+    res.redirect('/finalPrincessEN/index.html');
   }
 })
 
