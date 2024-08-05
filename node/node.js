@@ -130,12 +130,8 @@ app.get('/', (req, res) => {
   }else{
     res.redirect('/finalPrincessEN/index.html');
    // res.redirect('/finalPrincess/index.html');
-   res.redirect('/finalPrincess/index.html');
-  }else{
-    //res.redirect('/finalPrincessEN/index.html');
-    res.redirect('/finalPrincessEN/index.html');
   }
 })
 
-https.createServer(options, app).listen(443,()=>{console.log('Server is running on https://localhost:443');})
+https.createServer(options, app).listen(8081,()=>{console.log('Server is running on https://localhost:8081');})
  
