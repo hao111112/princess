@@ -46,18 +46,55 @@ selectRegions.forEach((region, index) => {
 });
 //
 document.addEventListener('DOMContentLoaded', () => {
-  const languages = document.querySelectorAll('.language');
+  let initialized = false;
+
+  function initializeLanguageSwitcher() {
+      if (initialized) return;
+      initialized = true;
+
+      // Detect the user's preferred language
+      const userLang = navigator.language || navigator.userLanguage;
+      const langSwitcher = document.querySelector('.lang-switcher');
+      const languages = Array.from(langSwitcher.querySelectorAll('.language'));
+
+      // Find the preferred language element
+      let preferredLangElement = languages.find(lang => lang.getAttribute('data-lang') === userLang);
+
+      if (!preferredLangElement) {
+          // Fallback to English if the preferred language is not found
+          preferredLangElement = languages.find(lang => lang.getAttribute('data-lang') === 'en');
+      }
+
+      // Move the preferred language to the first position
+      if (preferredLangElement) {
+          langSwitcher.insertBefore(preferredLangElement, langSwitcher.firstChild);
+      }
+
+      // Highlight the active language
+      languages.forEach(lang => lang.classList.remove('active'));
+      preferredLangElement.classList.add('active');
+  }
+
+  initializeLanguageSwitcher();
+
+  const langSwitcher = document.querySelector('.lang-switcher');
+  const languages = Array.from(langSwitcher.querySelectorAll('.language'));
   const firstLanguage = languages[0];
 
   languages.forEach((language) => {
-    language.addEventListener('click', () => {
-      // 获取被点击元素的语言代码
-      const clickedLang = language.dataset.lang;
+      language.addEventListener('click', () => {
+          // Get the clicked language's data-lang attribute and text content
+          const clickedLang = language.getAttribute('data-lang');
+          const clickedText = language.textContent;
 
-      // 将第一个元素的语言代码更新为被点击元素的语言代码
-      firstLanguage.dataset.lang = clickedLang;
-      firstLanguage.textContent = language.textContent;
-    });
+          // Update the first language's data-lang attribute and text content
+          firstLanguage.setAttribute('data-lang', clickedLang);
+          firstLanguage.textContent = clickedText;
+
+          // Remove 'active' class from all languages and add it to the clicked language
+          languages.forEach(lang => lang.classList.remove('active'));
+          language.classList.add('active');
+      });
   });
 });
 function alertError(category,lang){
