@@ -12,7 +12,7 @@
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <meta property="og:title" content="Pixel tower defense mobile game 'Princess Can't Defend' pre-registration is hot">
     <meta property="og:description" content="Register now to receive gifts and unlock the ultimate prize card princess!">
-    <meta property="og:url" content="https://register.princesscantdefend.com/finalPrincess/index.html">
+    <meta property="og:url" content="https://register.princesscantdefend.com/finalPrincessEN/index.html">
     <meta property="og:image" content="https://register.princesscantdefend.com/finalPrincess/images/ogEN.png">
     <meta property="og:type" content="website">
 <!-- Meta Pixel Code -->
@@ -70,7 +70,6 @@
                    <a href="https://www.youtube.com/channel/UC9ppn34K4AVVqe8nzZosVGw" target="_blank"></a>
                 </div>
                 <ul class="lang-switcher">
-                  <li class="language" data-lang="zh-TW" >繁體中文</li>
                   <li class="language" data-lang="zh-TW">繁體中文</li>
                   <li class="language" data-lang="en">English</li>
                   <li class="language" data-lang="ko" >한국말</li>
@@ -311,6 +310,39 @@ function triggercommitTrackingEvent() {
     );
   }
 }
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     let initialized = false;
+
+//     function initializeLanguageSwitcher() {
+//         if (initialized) return;
+//         initialized = true;
+
+//         // Detect the user's preferred language
+//         const userLang = navigator.language || navigator.userLanguage;
+//         const langSwitcher = document.querySelector('.lang-switcher');
+//         const languages = Array.from(langSwitcher.querySelectorAll('.language'));
+
+//         // Find the preferred language element
+//         let preferredLangElement = languages.find(lang => lang.getAttribute('data-lang') === userLang);
+
+//         if (!preferredLangElement) {
+//             // Fallback to English if the preferred language is not found
+//             preferredLangElement = languages.find(lang => lang.getAttribute('data-lang') === 'en');
+//         }
+
+//         // Move the preferred language to the first position
+//         if (preferredLangElement) {
+//             langSwitcher.insertBefore(preferredLangElement, langSwitcher.firstChild);
+//         }
+
+//         // Highlight the active language
+//         languages.forEach(lang => lang.classList.remove('active'));
+//         preferredLangElement.classList.add('active');
+//     }
+
+//     initializeLanguageSwitcher();
+// });
 
 
     

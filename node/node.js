@@ -125,11 +125,11 @@ app.get('/', (req, res) => {
   // 获取用户的语言（默认为英语）
   const lang = req.acceptsLanguages(['zh-TW', 'ja', 'ko', 'en']) || 'en';
   if(lang.startsWith('zh')){
-   // res.redirect('/finalPrincess/index.html');
-   res.redirect('/finalPrincessEN/index.html');
-  }else{
-    //res.redirect('/finalPrincessEN/index.html');
     res.redirect('/finalPrincess/index.html');
+  // res.redirect('/finalPrincessEN/index.html');
+  }else{
+    res.redirect('/finalPrincessEN/index.html');
+   // res.redirect('/finalPrincess/index.html');
   }
 })
 
