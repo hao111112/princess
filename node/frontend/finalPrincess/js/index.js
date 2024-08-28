@@ -118,6 +118,7 @@ function alertError(category,lang){
 }
 // 提交按钮点击事件监听器
 commitPhoneElement.addEventListener('click', () => {
+  return;
   // 检查复选框是否被勾选
   let lang=document.querySelector(".language").dataset.lang;
   // 检查手机号格式
@@ -286,22 +287,13 @@ const beforeappoint = document.querySelector('.beforeappoint')
 const appoint = document.querySelector('.appoint')
 const target =document.getElementById('appoint')
 beforeappoint.addEventListener('click', () => {
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+  window.open('https://princesscantdefend.onelink.me/aMfQ/e951v3c8', '_blank');
   });
  appoint.addEventListener('click', () => {
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+  window.open('https://princesscantdefend.onelink.me/aMfQ/e951v3c8', '_blank');
   });
 const attend=document.querySelector('.attend')
-attend.addEventListener('click', () => {
-  window.open('https://www.facebook.com/princesscantdefend/posts/pfbid0kVantVTYHhNi9dTeq3GfxuAvx2CQWMHW6fmvRdTBQCVwvSAGp4Uc3XPEQr43oNWCl', '_blank');
-}
-)
+
 
 
     

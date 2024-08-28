@@ -88,8 +88,8 @@
         <p class="warrior">PVP塔防遊戲</p>
       </div>
       <div class="menuButton"></div>
-      <div class="appoint lang-appoint">立即預約</div>
-      <div class="button lang-appoint">立即預約</div>
+      <div class="appoint lang-appoint">立即下载</div>
+      <div class="button lang-appoint">立即下载</div>
       <div class="logo"></div>
     </div>
    </header>
@@ -122,7 +122,7 @@
               <p class="pleasePhone lang-pleasePhone"> 請輸入手機號:</p>
                 
               <div class="agree"> <input id="agreeCheck" type="checkbox"><a class="lang-agree" href="Tnc.html" target="_blank">同意隱私政策使用及接收獎勵資訊</a></div>
-              <div class="commit lang-appoint" id="commit">立即預約</div>
+              <div class="commit lang-attend" id="commit">已完結</div>
           </div>
           <div class="content2"id="prize">
               <p class="title2 lang-box1t2" >限時菁英封測</p>
@@ -131,7 +131,7 @@
               
           </div>
        </div>
-       <div class="attend lang-attend">立即加入</div>
+       <div class="attend lang-attend">已完結</div>
       <div class="box3">
         
         <div class="content">
@@ -265,6 +265,7 @@ window.appier_q.push(
   var beforeAppointElement = document.querySelector('.appoint');
    var appointElement = document.querySelector('.button');
    var commitElement = document.querySelector('.commit');
+   commitElement.replaceWith(commitElement.cloneNode(true));
    // 标志,记录是否已经触发过跟踪事件
    var hasTriggeredBeforeAppointEvent = false;
    var hasTriggeredAppointEvent = false;

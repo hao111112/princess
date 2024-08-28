@@ -4,8 +4,8 @@ const translations = {
       "lang-group": '社群',
       "lang-intro": '介紹',
       "lang-attention": '注意事項',
-      "lang-beforeappoint": '事前預約',
-      "lang-appoint": '立即預約',
+      "lang-beforeappoint": '立即下载',
+      "lang-appoint": '立即下载',
       "lang-box1t1": '填寫手機號碼即可完成預約拿好禮',
       "lang-pleasePhone": '請輸入手機號:',
       "lang-HK": '香港',
@@ -31,7 +31,7 @@ const translations = {
       "lang-agree": '同意隱私政策使用及接收獎勵資訊',
       "lang-box1t2": '限時菁英封測',
       "lang-box1text2": '限時菁英封測現已開放！現在就立即報名搶先體驗遊戲吧！<br>(封測只限 Android 用戶參與，名額有限，先到先得)',
-      "lang-attend": '立即加入',
+      "lang-attend": '已完結',
       "lang-followt": '關注官方社群抽最新Iphone 15promax',
       "lang-followtext": '相關詳情請留意官方社交媒體',
       "lang-official": '官方社群',
@@ -67,8 +67,8 @@ const translations = {
       "lang-group": 'Community',
       "lang-intro": 'Features',
       "lang-attention": 'Terms ',
-      "lang-beforeappoint": 'Pre-register',
-      "lang-appoint": 'Pre-register',
+      "lang-beforeappoint": 'Download Now',
+      "lang-appoint": 'Download Now',
       "lang-box1t1": 'Fill in your mobile phone number and get the pre-registration gift', 
       "lang-pleasePhone": 'Please enter your mobile phone number:',
       "lang-HK": 'HongKong',
@@ -94,7 +94,7 @@ const translations = {
       "lang-agree": 'Agree to the Privacy Policy for the use and receipt of reward information',
       "lang-box1t2": 'Limited Elite Beta Test',
       "lang-box1text2": 'Elite Closed Beta is open! Sign up now! <br>(Android only, limited spots, first-come, first-served)',
-      "lang-attend": 'Join Now',
+      "lang-attend": 'Completed',
       "lang-followt": 'Follow our community and grab a chance to win iPhone 15 Pro Max!',
       "lang-followtext": 'Please stay tuned to our official social media for the raffle detail.',
       "lang-official": 'Official Community',
@@ -130,8 +130,8 @@ const translations = {
       "lang-group": '커뮤니티', 
       "lang-intro": '게임 설명',
       "lang-attention": '약관',
-      "lang-beforeappoint": '사전등록',
-      "lang-appoint": '예약하다',
+      "lang-beforeappoint": '지금 다운로드',
+      "lang-appoint": '지금 다운로드',
       "lang-box1t1": '휴대폰 번호를 입력하여 예약을 완료하고 선물을 받으세요.',
       "lang-pleasePhone": '휴대 전화 번호를 입력하십시오:',
       "lang-HK": '홍콩',
@@ -157,7 +157,7 @@ const translations = {
       "lang-agree": '보너스 정보의 사용 및 수령에 대한 개인 정보 보호 정책에 동의합니다.',
       "lang-box1t2": '한정 엘리트 베타 테스트',
       "lang-box1text2": '기간 한정 엘리트 클로즈 베타가 시작되었습니다! 지금 얼리 액세스에 등록하세요!<br>(클로즈 베타는 안드로이드 사용자만 이용할 수 있으며, 장소 수는 제한되어 있으며 선착순으로 진행됩니다.)',
-      "lang-attend": '지금 가입하세요',
+      "lang-attend": '완료됨',
       "lang-followt": '커뮤니티 팔로우하고 iPhone 15 Pro Max 당첨 기회 잡기!',
       "lang-followtext": '추첨에 대한 자세한 내용은 공식 소셜 미디어를 계속 지켜봐 주시기 바랍니다.',
       "lang-official": '공식 커뮤니티',
@@ -193,8 +193,8 @@ const translations = {
 "lang-group": 'コミュニティ',
 "lang-intro": 'ゲーム紹介',
 "lang-attention": '条項',
-"lang-beforeappoint": '事前登録',
-"lang-appoint": '今すぐ予約',
+"lang-beforeappoint": 'ダウンロード',
+"lang-appoint": 'ダウンロード',
 "lang-box1t1": '携帯電話番号を入力して事前登録プレゼントをゲットしよう',
 "lang-pleasePhone": '携帯電話番号を入力してください:',
 "lang-HK": '香港',
@@ -220,7 +220,7 @@ const translations = {
 "lang-agree": '報酬情報の使用と受け取りに関するプライバシーポリシーに同意する',
 "lang-box1t2": '期間限定エリートCBテスト',
 "lang-box1text2": 'エリートクローズドベータが期間限定でオープン！今すぐ早期アクセスにサインアップを！<br>(Androidユーザー限定、先着順)',
-"lang-attend": '今すぐ登録',
+"lang-attend": '終了',
 "lang-followt": '公式フォローでiPhone 15 Pro Maxを抽選でゲット!',
 "lang-followtext": '抽選の詳細については、公式ソーシャルメディアにご注目ください。',
 "lang-official": '公式コミュニティ',
@@ -284,7 +284,6 @@ if(isFirstCome){
       document.querySelector('.lang-beforeappoint').textContent = translations[lang]['lang-beforeappoint'];
       document.querySelectorAll('.lang-appoint')[0].textContent = translations[lang]['lang-appoint'];
       document.querySelectorAll('.lang-appoint')[1].textContent = translations[lang]['lang-appoint'];
-      document.querySelectorAll('.lang-appoint')[2].textContent = translations[lang]['lang-appoint'];
       document.querySelector('.lang-box1t1').textContent = translations[lang]['lang-box1t1'];
       document.querySelector('.lang-box1text2').innerHTML = translations[lang]['lang-box1text2'];
       document.querySelector('.lang-pleasePhone').textContent = translations[lang]['lang-pleasePhone'];
@@ -309,7 +308,8 @@ if(isFirstCome){
      const lang_agree= document.querySelector('.lang-agree');
      lang_agree.textContent = translations[lang]['lang-agree'];
       document.querySelector('.lang-box1t2').textContent = translations[lang]['lang-box1t2'];
-      document.querySelector('.lang-attend').textContent = translations[lang]['lang-attend'];
+      document.querySelectorAll('.lang-attend')[0].textContent = translations[lang]['lang-attend'];
+      document.querySelectorAll('.lang-attend')[1].textContent = translations[lang]['lang-attend'];
       document.querySelector('.lang-followt').textContent = translations[lang]['lang-followt'];
       document.querySelector('.lang-followtext').textContent = translations[lang]['lang-followtext'];
       document.querySelectorAll('.lang-official').forEach(function(item){

@@ -10,11 +10,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
-    <meta property="og:title" content="Pixel tower defense mobile game 'Princess Can't Defend' pre-registration is hot">
-    <meta property="og:description" content="Register now to receive gifts and unlock the ultimate prize card princess!">
-    <meta property="og:url" content="https://register.princesscantdefend.com/finalPrincessEN/index.html">
-    <meta property="og:image" content="https://register.princesscantdefend.com/finalPrincess/images/ogEN.png">
+    <meta property="og:title" content="Princess Can't Defend 公主守不了">
+    <meta property="og:description" content="Pre-register NOW! 立即預約領好禮！">
+    <meta property="og:url" content="https://register.princesscantdefend.com/finalPrincess/index.html">
+    <meta property="og:image" content="https://register.princesscantdefend.com/finalPrincess/images/og.png">
     <meta property="og:type" content="website">
+
 <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -71,13 +72,13 @@
                 </div>
                 <ul class="lang-switcher">
                   <li class="language" data-lang="zh-TW" >繁體中文</li>
-                  <li class="language" data-lang="zh-TW" >繁體中文</li>
+                  <li class="language" data-lang="zh-TW">繁體中文</li>
                   <li class="language" data-lang="en">English</li>
                   <li class="language" data-lang="ko" >한국말</li>
                   <li class="language" data-lang="ja" >にほんご</li>
                 </ul>
                 <div class="beforeappoint lang-beforeappoint" >
-                  事前預約
+                  已完結
                 </div>
                 
             </div>
@@ -87,7 +88,7 @@
 
             </div>
             <div class="appoint zindex lang-appoint">
-              立即預約
+              已完結
             </div>
             <div class="cloud zindex">
             </div>
@@ -124,13 +125,13 @@
                             <div class="phoneInput " ><input id="phoneText" type="text" class="lang-inputPhone" placeholder="填寫手機號碼即可完成預約拿好禮"></div>
                     </div>
                     <div class="agree "> <input id="agreeCheck" type="checkbox" ><a class="lang-agree" target="_blank"href="Tnc.html" >同意隱私政策使用及接收獎勵資訊</a></div>
-                    <div class="commit lang-appoint" id="commit" >立即預約</div>
+                    <div class="commit lang-attend" id="commit" >已完結</div>
                 </div>
                 <div class="content2">
                     <p class="title2 lang-box1t2" >限時菁英封測</p>
                     <p class="text lang-box1text2" >限時菁英封測現已開放！現在就立即報名搶先體驗遊戲吧！<br>
                       (封測只限 Android 用戶參與，名額有限，先到先得)</p>
-                    <div class="attend lang-attend" >立即加入</div>
+                    <div class="attend lang-attend" >已完結</div>
                 </div>
              </div>
              <div class="box3" id="group">
@@ -221,6 +222,7 @@
     <script src="./js/i18n.js"></script>
     <script src="./js/index.js"></script>
     <script>
+    
     let paramsSaved = false;
     window.addEventListener('load', function() {
     // 获取当前页面的 URL 查询参数
@@ -265,6 +267,7 @@ window.appier_q.push(
   var beforeAppointElement = document.querySelector('.beforeappoint');
    var appointElement = document.querySelector('.appoint');
    var commitElement = document.querySelector('.commit');
+   commitElement.replaceWith(commitElement.cloneNode(true));
    // 标志,记录是否已经触发过跟踪事件
    var hasTriggeredBeforeAppointEvent = false;
    var hasTriggeredAppointEvent = false;
@@ -311,39 +314,6 @@ function triggercommitTrackingEvent() {
     );
   }
 }
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     let initialized = false;
-
-//     function initializeLanguageSwitcher() {
-//         if (initialized) return;
-//         initialized = true;
-
-//         // Detect the user's preferred language
-//         const userLang = navigator.language || navigator.userLanguage;
-//         const langSwitcher = document.querySelector('.lang-switcher');
-//         const languages = Array.from(langSwitcher.querySelectorAll('.language'));
-
-//         // Find the preferred language element
-//         let preferredLangElement = languages.find(lang => lang.getAttribute('data-lang') === userLang);
-
-//         if (!preferredLangElement) {
-//             // Fallback to English if the preferred language is not found
-//             preferredLangElement = languages.find(lang => lang.getAttribute('data-lang') === 'en');
-//         }
-
-//         // Move the preferred language to the first position
-//         if (preferredLangElement) {
-//             langSwitcher.insertBefore(preferredLangElement, langSwitcher.firstChild);
-//         }
-
-//         // Highlight the active language
-//         languages.forEach(lang => lang.classList.remove('active'));
-//         preferredLangElement.classList.add('active');
-//     }
-
-//     initializeLanguageSwitcher();
-// });
 
 
     

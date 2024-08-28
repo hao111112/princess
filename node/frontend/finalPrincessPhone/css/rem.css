@@ -81,7 +81,7 @@ html{
     width: 3.5rem;
     height: 1.7rem;
     color: #D9D9D9;
-    font-size: 0.5rem;
+    font-size: 0.43rem;
     line-height: 1.5rem;
     font-weight: 700;
     background: url(../images/header/buttton/button.png) no-repeat ;
@@ -263,9 +263,10 @@ html{
     color: #FFFFFF;
     font-size: .28rem;
     line-height: 0.8rem;
+    filter: grayscale(50%);
 }
 .commit:hover{
-  cursor: pointer;
+  cursor: not-allowed;
 }
 .box1 .content2{
   text-align: center;
@@ -297,7 +298,7 @@ html{
   transform: translateX(-50%);
     width: 2rem;
     height: 0.8rem;
-    background: url(../images/main/buttton/commit.svg) no-repeat;
+    background: url(../images/main/buttton/commit.svg) no-repeat ;
     background-size: 100%;
     text-align: center;
     line-height: .3333rem;
@@ -305,15 +306,16 @@ html{
     font-size: .25rem;
     line-height: 0.8rem;
     z-index: 99;
+    filter: grayscale(50%);
 }
 .box1 .content2 .attend:hover{
-  cursor: pointer;
+  cursor: not-allowed;
 }
   .box2{
     position: relative;
     width: 10rem;
     height: 12.5rem;
-    background: url(../images/main/box2/beforePrize4.png) no-repeat ;
+    background: url(../images/main/box2/beforePrize5.png) no-repeat ;
     background-size: 100%;
   }
   .box2 .prize{

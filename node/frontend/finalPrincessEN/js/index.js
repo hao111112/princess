@@ -45,56 +45,19 @@ selectRegions.forEach((region, index) => {
   });
 });
 //
- document.addEventListener('DOMContentLoaded', () => {
-//   let initialized = false;
-
-//   function initializeLanguageSwitcher() {
-//       if (initialized) return;
-//       initialized = true;
-
-//       // Detect the user's preferred language
-//       const userLang = navigator.language || navigator.userLanguage;
-//       const langSwitcher = document.querySelector('.lang-switcher');
-//       const languages = Array.from(langSwitcher.querySelectorAll('.language'));
-
-//       // Find the preferred language element
-//       let preferredLangElement = languages.find(lang => lang.getAttribute('data-lang') === userLang);
-
-//       if (!preferredLangElement) {
-//           // Fallback to English if the preferred language is not found
-//           preferredLangElement = languages.find(lang => lang.getAttribute('data-lang') === 'en');
-//       }
-
-//       // Move the preferred language to the first position
-//       if (preferredLangElement) {
-//           langSwitcher.insertBefore(preferredLangElement, langSwitcher.firstChild);
-//       }
-
-//       // Highlight the active language
-//       languages.forEach(lang => lang.classList.remove('active'));
-//       preferredLangElement.classList.add('active');
-//   }
-
-//   initializeLanguageSwitcher();
-
-  const langSwitcher = document.querySelector('.lang-switcher');
-  const languages = Array.from(langSwitcher.querySelectorAll('.language'));
+document.addEventListener('DOMContentLoaded', () => {
+  const languages = document.querySelectorAll('.language');
   const firstLanguage = languages[0];
 
   languages.forEach((language) => {
-      language.addEventListener('click', () => {
-          // Get the clicked language's data-lang attribute and text content
-          const clickedLang = language.getAttribute('data-lang');
-          const clickedText = language.textContent;
+    language.addEventListener('click', () => {
+      // 获取被点击元素的语言代码
+      const clickedLang = language.dataset.lang;
 
-          // Update the first language's data-lang attribute and text content
-          firstLanguage.setAttribute('data-lang', clickedLang);
-          firstLanguage.textContent = clickedText;
-
-          // Remove 'active' class from all languages and add it to the clicked language
-          languages.forEach(lang => lang.classList.remove('active'));
-          language.classList.add('active');
-      });
+      // 将第一个元素的语言代码更新为被点击元素的语言代码
+      firstLanguage.dataset.lang = clickedLang;
+      firstLanguage.textContent = language.textContent;
+    });
   });
 });
 function alertError(category,lang){
@@ -155,6 +118,7 @@ function alertError(category,lang){
 }
 // 提交按钮点击事件监听器
 commitPhoneElement.addEventListener('click', () => {
+  return;
   // 检查复选框是否被勾选
   let lang=document.querySelector(".language").dataset.lang;
   // 检查手机号格式
@@ -323,22 +287,13 @@ const beforeappoint = document.querySelector('.beforeappoint')
 const appoint = document.querySelector('.appoint')
 const target =document.getElementById('appoint')
 beforeappoint.addEventListener('click', () => {
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+  window.open('https://princesscantdefend.onelink.me/aMfQ/e951v3c8', '_blank');
   });
  appoint.addEventListener('click', () => {
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+  window.open('https://princesscantdefend.onelink.me/aMfQ/e951v3c8', '_blank');
   });
 const attend=document.querySelector('.attend')
-attend.addEventListener('click', () => {
-  window.open('https://www.facebook.com/princesscantdefend/posts/pfbid0kVantVTYHhNi9dTeq3GfxuAvx2CQWMHW6fmvRdTBQCVwvSAGp4Uc3XPEQr43oNWCl', '_blank');
-}
-)
+
 
 
     

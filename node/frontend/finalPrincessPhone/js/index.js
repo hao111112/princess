@@ -278,22 +278,13 @@ const beforeappoint = document.querySelector('.button')
 const appoint = document.querySelector('.appoint')
 const target =document.getElementById('appoint')
 beforeappoint.addEventListener('click', () => {
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+  window.open('https://princesscantdefend.onelink.me/aMfQ/e951v3c8', '_blank');
   });
  appoint.addEventListener('click', () => {
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+  window.open('https://princesscantdefend.onelink.me/aMfQ/e951v3c8', '_blank');
   });
 const attend=document.querySelector('.attend')
-attend.addEventListener('click', () => {
-  window.open('https://www.facebook.com/princesscantdefend/posts/pfbid0kVantVTYHhNi9dTeq3GfxuAvx2CQWMHW6fmvRdTBQCVwvSAGp4Uc3XPEQr43oNWCl', '_blank');
-}
-)
+
 
 
     
@@ -347,7 +338,7 @@ function scrollToSection(sectionId) {
   let targetElement;
   switch (sectionId) {
     case 'menuAppoint':
-      targetElement = document.querySelector('#appoint');
+      window.open('https://princesscantdefend.onelink.me/aMfQ/e951v3c8', '_blank');
       break;
     case 'menuIntro':
       targetElement = document.querySelector('#intro');
